@@ -1,0 +1,80 @@
+import { error } from "console";
+import db from "./database.js";
+
+function getAllArtists(req, res) {
+  const query = "SELECT * FROM artists ORDER BY name;";
+  db.query(query, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+
+function getAllAlbums(req, res) {
+  const query = "SELECT * FROM albums ORDER BY name;";
+  db.query(query, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+
+function getArtistById(req, res) {
+  const id = req.params.id;
+  const query = "SELECT * FROM artists WHERE id = ?;";
+  const values = [id];
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results[0]);
+    }
+  });
+}
+
+async function getAlbumById(req, res) {
+  const id = req.params.id;
+  const query = "SELECT * FROM albums WHERE id = ?;";
+  const values = [id];
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results[0]);
+    }
+  });
+}
+
+async function getAllTracks(req, res) {
+  const query = "SELECT * FROM tracks ORDER BY name;";
+  db.query(query, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+
+(req, res) => {
+  res.send("Hello World!");
+};
+
+async function getTrackById(req, res) {
+  const id = req.params.id;
+  const query = "SELECT * FROM tracks WHERE id = ?;";
+  const values = [id];
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results[0]);
+    }
+  });
+}
+
+export { getAllArtists, getAllAlbums, getArtistById, getAlbumById, getAllTracks, getTrackById };
