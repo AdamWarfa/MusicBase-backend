@@ -64,7 +64,7 @@ INSERT INTO tracks (id, name) VALUES
 ('30a93505-8d94-4cdb-a1a8-94c1618208d6','Barcelona'),
 ('f863d365-fbdf-4e2f-a330-c934b91ce8ba','Bibia Be Ye Ye'),
 ('80b90811-2ecf-42c0-9a67-344bacd70af2', 'Nancy Mulligan'),
-('88909321-f718-4eed-b1bf-d33a1ce2a94c','Save Myself'),
+('88909321-f718-4eed-b1bf-d33a1ce2a94c','Save Myself');
 
 CREATE TABLE album_tracks (
 albumId VARCHAR(255) not null,
