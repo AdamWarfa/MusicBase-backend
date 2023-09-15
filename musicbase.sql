@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS musicbase_db;
+
 CREATE DATABASE musicbase_db;
 USE musicbase_db;
 
@@ -21,8 +23,7 @@ id VARCHAR(255) not null primary key,
 name VARCHAR(255),
 yearPublished int,
 image TEXT,
-artistId VARCHAR(255) not null,
-foreign key(artistId) references artists(id)
+artistId VARCHAR(255) not null
 );
 
 INSERT INTO albums (id, name, yearPublished, image, artistId)
@@ -142,4 +143,14 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','80b90811-2ecf-42c0-9a67-344bacd70af2'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','88909321-f718-4eed-b1bf-d33a1ce2a94c');
 
-/*/ kan testes i mysql ved at skrive show diagram
+CREATE TABLE album_artists (
+albumId VARCHAR(255) not null,
+artistId VARCHAR(255) not null,
+primary key(albumId, artistId),
+foreign key(albumId) references albums(id),
+foreign key(artistId) references artists(id)
+);
+
+INSERT INTO album_artists (artistId, albumId) VALUES 
+('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','c78e176f-b8a7-482e-b5d4-f0facf594e60'),
+('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d');
