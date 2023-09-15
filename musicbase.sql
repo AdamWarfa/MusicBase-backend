@@ -22,15 +22,14 @@ CREATE TABLE albums (
 id VARCHAR(255) not null primary key,
 name VARCHAR(255),
 yearPublished int,
-image TEXT,
-artistId VARCHAR(255) not null
+image TEXT
 );
 
-INSERT INTO albums (id, name, yearPublished, image, artistId)
-VALUES ('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg','d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e');
+INSERT INTO albums (id, name, yearPublished, image)
+VALUES ('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg');
 
-INSERT INTO albums (id, name, yearPublished, image, artistId)
-VALUES ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg','b744da0a-9140-4e88-a6c0-976b6a9e2c6a');
+INSERT INTO albums (id, name, yearPublished, image)
+VALUES ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg');
 
 
 CREATE TABLE tracks (
@@ -38,7 +37,7 @@ id VARCHAR(255) not null primary key,
 name VARCHAR(255)
 );
 
-INSERT INTO tracks (id, name) VALUES 
+INSERT INTO tracks (id, name) VALUES
 ('a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e','Rolling in the Deep'),
 ('b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e','Rumour Has It'),
 ('a5224f30-7622-481f-8486-26e8eb40dd1e','Someone like You'),
@@ -75,7 +74,7 @@ foreign key(albumId) references albums(id),
 foreign key(trackId) references tracks(id)
 );
 
-INSERT INTO album_tracks (albumId, trackId) VALUES 
+INSERT INTO album_tracks (albumId, trackId) VALUES
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','a5224f30-7622-481f-8486-26e8eb40dd1e'),
@@ -114,7 +113,7 @@ foreign key(trackId) references tracks(id)
 );
 
 
-INSERT INTO artist_tracks( artistId, trackId) VALUES 
+INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','a5224f30-7622-481f-8486-26e8eb40dd1e'),
@@ -151,6 +150,6 @@ foreign key(albumId) references albums(id),
 foreign key(artistId) references artists(id)
 );
 
-INSERT INTO album_artists (artistId, albumId) VALUES 
+INSERT INTO album_artists (artistId, albumId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','c78e176f-b8a7-482e-b5d4-f0facf594e60'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d');
