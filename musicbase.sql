@@ -11,11 +11,11 @@ image TEXT,
 shortDescription TEXT
 );
 
-INSERT INTO artists (id, name, image, shortDescription)
-VALUES ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e', 'Adele', 'https://e3.365dm.com/23/08/768x432/skynews-adele-brit-school_6256656.jpg?20230829093606', 'Grammy-winning British singer-songwriter');
-
-INSERT INTO artists (id, name, image, shortDescription)
-VALUES('b744da0a-9140-4e88-a6c0-976b6a9e2c6a', 'Ed Sheeran', 'https://dynamicmedia.livenationinternational.com/Media/j/u/p/c529e4d9-b640-45a9-9ee7-2e55541ffe32.jpg', 'Chart-topping English musician and songwriter');
+INSERT INTO artists (id, name, image, shortDescription) VALUES 
+('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e', 'Adele', 'https://e3.365dm.com/23/08/768x432/skynews-adele-brit-school_6256656.jpg?20230829093606', 'Grammy-winning British singer-songwriter'),
+('b744da0a-9140-4e88-a6c0-976b6a9e2c6a', 'Ed Sheeran', 'https://dynamicmedia.livenationinternational.com/Media/j/u/p/c529e4d9-b640-45a9-9ee7-2e55541ffe32.jpg', 'Chart-topping English musician and songwriter'),
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'Dave', 'https://www.thesun.co.uk/wp-content/uploads/2018/02/NINTCHDBPICT000523447570.jpg', 'English rapper. He has gained acclaim for his socially conscious lyricism and wordplay.'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0','Central Cee', 'https://soundvenue.com/wp-content/uploads/2022/11/4C4A98740059-920x920.jpg', 'British rapper and songwriter');
 
 
 CREATE TABLE albums (
@@ -25,11 +25,16 @@ yearPublished int,
 image TEXT
 );
 
-INSERT INTO albums (id, name, yearPublished, image)
-VALUES ('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg');
-
-INSERT INTO albums (id, name, yearPublished, image)
-VALUES ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg');
+INSERT INTO albums (id, name, yearPublished, image) VALUES 
+('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg'),
+('dbed2506-da74-4b93-b476-f1580302feb2', '25', 2015, 'https://upload.wikimedia.org/wikipedia/en/9/96/Adele_-_25_%28Official_Album_Cover%29.png'),
+('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'x (Multiply)', 2014, 'https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png'),
+('b40762f3-e435-4f31-b6bd-e284b5146a93', 'Psychodrama', 2019, 'https://upload.wikimedia.org/wikipedia/en/7/75/Dave_Psychodrama.jpeg'),
+('ac3d0ae1-6dab-4492-97b2-b81621f22e57', 'We''re All Alone In This Together', 2021, 'https://upload.wikimedia.org/wikipedia/en/3/3d/Dave_-_We%27re_All_Alone_in_This_Together.jpg'),
+('a80e9174-61eb-444e-b9e5-ba7e483185b0', 'Wild West', 2021, 'https://images.genius.com/be2209817e6c0e3060a4c0bf89fb3229.1000x1000x1.png'),
+('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '23', 2022, 'https://images.genius.com/e2e71c4727c43b794627d6f6e31b603a.1000x1000x1.png'),
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'Split Decision', 2023, 'https://grmdaily.com/wp-content/uploads/2023/06/SPLIT-DECISION.jpg');
 
 
 CREATE TABLE tracks (
