@@ -196,4 +196,100 @@ async function postAlbum(req, res) {
   });
 }
 
-export { getAllArtists, getAllAlbums, getArtistById, getAlbumById, getAllTracks, getTrackById, getAlbumsByArtistId, getTracksByAlbumId, getTracksByArtistId, postArtist, postTrack, postAlbum };
+async function updateArtistById(req, res) {
+  console.log(req.body);
+  const { id, artistName, artistImage, shortDescription } = req.body;
+  const query = `UPDATE artists SET artistName = ?, artistImage = ?, shortDescription = ? WHERE id = ?`;
+  const values = [artistName, artistImage, shortDescription, id];
+
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+
+async function updateAlbumById(req, res) {
+  console.log(req.body);
+  const { id, albumName, yearPublished, albumImage } = req.body;
+  const query = `UPDATE albums SET name = ?, yearPublished = ?, albumImage = ? WHERE id = ?`;
+  const values = [albumName, yearPublished, albumImage, id];
+
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+async function updateTrackById(req, res) {
+  console.log(req.body);
+  const { id, trackName } = req.body;
+  const query = `UPDATE tracks SET trackName = ? WHERE id = ?`;
+  const values = [trackName, id];
+
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      res.json(results);
+    }
+  });
+}
+
+async function deleteArtistById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = `
+  DELETE FROM artist_tracks WHERE artistId = ?;
+  DELETE FROM album_artists WHERE artistId = ?;
+  DELETE FROM artists WHERE id = ?;
+  `;
+  const values = [id, id, id];
+}
+
+async function deleteAlbumById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = `
+  DELETE FROM album_tracks WHERE albumId = ?;
+  DELETE FROM album_artists WHERE albumId = ?;
+  DELETE FROM albums WHERE id = ?;
+  `;
+  const values = [id, id, id];
+}
+
+async function deleteTrackById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = `
+  DELETE FROM album_tracks WHERE trackId = ?;
+  DELETE FROM artist_tracks WHERE trackId = ?;
+  DELETE FROM tracks WHERE id = ?;
+  `;
+  const values = [id, id, id];
+}
+
+export {
+  getAllArtists,
+  getAllAlbums,
+  getArtistById,
+  getAlbumById,
+  getAllTracks,
+  getTrackById,
+  getAlbumsByArtistId,
+  getTracksByAlbumId,
+  getTracksByArtistId,
+  postArtist,
+  postTrack,
+  postAlbum,
+  deleteArtistById,
+  deleteAlbumById,
+  deleteTrackById,
+  updateArtistById,
+  updateAlbumById,
+  updateTrackById,
+};
