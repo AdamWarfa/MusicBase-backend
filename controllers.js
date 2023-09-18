@@ -198,9 +198,9 @@ async function postAlbum(req, res) {
 
 async function updateArtistById(req, res) {
   console.log(req.body);
-  const { id, name, image, shortDescription } = req.body;
-  const query = `UPDATE artists SET name = ?, image = ?, shortDescription = ? WHERE id = ?`;
-  const values = [name, image, shortDescription, id];
+  const { id, artistName, artistImage, shortDescription } = req.body;
+  const query = `UPDATE artists SET artistName = ?, artistImage = ?, shortDescription = ? WHERE id = ?`;
+  const values = [artistName, artistImage, shortDescription, id];
 
   db.query(query, values, (error, results, fields) => {
     if (error) {
@@ -213,9 +213,9 @@ async function updateArtistById(req, res) {
 
 async function updateAlbumById(req, res) {
   console.log(req.body);
-  const { id, name, yearPublished, image } = req.body;
-  const query = `UPDATE albums SET name = ?, yearPublished = ?, image = ? WHERE id = ?`;
-  const values = [name, yearPublished, image, id];
+  const { id, albumName, yearPublished, albumImage } = req.body;
+  const query = `UPDATE albums SET name = ?, yearPublished = ?, albumImage = ? WHERE id = ?`;
+  const values = [albumName, yearPublished, albumImage, id];
 
   db.query(query, values, (error, results, fields) => {
     if (error) {
@@ -227,9 +227,9 @@ async function updateAlbumById(req, res) {
 }
 async function updateTrackById(req, res) {
   console.log(req.body);
-  const { id, name } = req.body;
-  const query = `UPDATE tracks SET name = ? WHERE id = ?`;
-  const values = [name, id];
+  const { id, trackName } = req.body;
+  const query = `UPDATE tracks SET trackName = ? WHERE id = ?`;
+  const values = [trackName, id];
 
   db.query(query, values, (error, results, fields) => {
     if (error) {
