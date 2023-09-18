@@ -283,6 +283,9 @@ export {
   getAlbumsByArtistId,
   getTracksByAlbumId,
   getTracksByArtistId,
+  postArtist,
+  postTrack,
+  postAlbum,
   deleteArtistById,
   deleteAlbumById,
   deleteTrackById,
@@ -290,4 +293,3 @@ export {
   updateAlbumById,
   updateTrackById,
 };
-export { getAllArtists, getAllAlbums, getArtistById, getAlbumById, getAllTracks, getTrackById, getAlbumsByArtistId, getTracksByAlbumId, getTracksByArtistId, postArtist, postTrack, postAlbum };
