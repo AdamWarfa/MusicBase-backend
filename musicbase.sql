@@ -6,12 +6,12 @@ USE musicbase_db;
 
 CREATE TABLE artists (
 id VARCHAR(255) not null primary key,
-name VARCHAR(255),
-image TEXT,
+artistName VARCHAR(255),
+artistImage TEXT,
 shortDescription TEXT
 );
 
-INSERT INTO artists (id, name, image, shortDescription) VALUES 
+INSERT INTO artists (id, artistName, artistImage, shortDescription) VALUES 
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e', 'Adele', 'https://e3.365dm.com/23/08/768x432/skynews-adele-brit-school_6256656.jpg?20230829093606', 'Grammy-winning British singer-songwriter'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a', 'Ed Sheeran', 'https://dynamicmedia.livenationinternational.com/Media/j/u/p/c529e4d9-b640-45a9-9ee7-2e55541ffe32.jpg', 'Chart-topping English musician and songwriter'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'Dave', 'https://www.thesun.co.uk/wp-content/uploads/2018/02/NINTCHDBPICT000523447570.jpg', 'English rapper. He has gained acclaim for his socially conscious lyricism and wordplay.'),
@@ -20,12 +20,12 @@ INSERT INTO artists (id, name, image, shortDescription) VALUES
 
 CREATE TABLE albums (
 id VARCHAR(255) not null primary key,
-name VARCHAR(255),
+albumTitle VARCHAR(255),
 yearPublished int,
-image TEXT
+albumCover TEXT
 );
 
-INSERT INTO albums (id, name, yearPublished, image) VALUES 
+INSERT INTO albums (id, albumTitle, yearPublished, albumCover) VALUES 
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg'),
 ('dbed2506-da74-4b93-b476-f1580302feb2', '25', 2015, 'https://upload.wikimedia.org/wikipedia/en/9/96/Adele_-_25_%28Official_Album_Cover%29.png'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg'),
@@ -39,10 +39,10 @@ INSERT INTO albums (id, name, yearPublished, image) VALUES
 
 CREATE TABLE tracks (
 id VARCHAR(255) not null primary key,
-name VARCHAR(255)
+trackName VARCHAR(255)
 );
 
-INSERT INTO tracks (id, name) VALUES
+INSERT INTO tracks (id, trackName) VALUES
 ('a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e','Rolling in the Deep'),
 ('b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e','Rumour Has It'),
 ('a5224f30-7622-481f-8486-26e8eb40dd1e','Someone like You'),

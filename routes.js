@@ -17,10 +17,13 @@ import {
   updateArtistById,
   updateAlbumById,
   updateTrackById,
+  postTrack,
+  postArtist,
+  postAlbum,
 } from "./controllers.js";
 
 const app = express();
-const port = 5000;
+const port = 5001;
 app.use(cors());
 app.use(express.json());
 dotenv.config();
@@ -47,17 +50,23 @@ app.get("/albums/:id/tracks", getTracksByAlbumId);
 
 app.get("/artists/:id/tracks", getTracksByArtistId);
 
-app.delete("/artists/:id", deleteArtistById);
+app.post("/artists", postArtist);
 
-app.delete("/albums/:id", deleteAlbumById);
+app.post("/tracks", postTrack);
 
-app.delete("/tracks/:id", deleteTrackById);
+app.post("/albums", postAlbum);
 
 app.put("/artists/:id", updateArtistById);
 
 app.put("/albums/:id", updateAlbumById);
 
 app.put("/tracks/:id", updateTrackById);
+
+app.delete("/artists/:id", deleteArtistById);
+
+app.delete("/albums/:id", deleteAlbumById);
+
+app.delete("/tracks/:id", deleteTrackById);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
