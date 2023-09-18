@@ -75,8 +75,8 @@ CREATE TABLE album_tracks (
 albumId VARCHAR(255) not null,
 trackId VARCHAR(255) not null,
 primary key(albumId, trackId),
-foreign key(albumId) references albums(id),
-foreign key(trackId) references tracks(id)
+foreign key(albumId) references albums(id) ON DELETE CASCADE,
+foreign key(trackId) references tracks(id) ON DELETE CASCADE
 );
 
 INSERT INTO album_tracks (albumId, trackId) VALUES
@@ -113,8 +113,8 @@ CREATE TABLE artist_tracks (
 artistId VARCHAR(255) not null,
 trackId VARCHAR(255) not null,
 primary key(artistId, trackId),
-foreign key(artistId) references artists(id),
-foreign key(trackId) references tracks(id)
+foreign key(artistId) references artists(id) ON DELETE CASCADE,
+foreign key(trackId) references tracks(id) ON DELETE CASCADE
 );
 
 
@@ -151,8 +151,8 @@ CREATE TABLE album_artists (
 albumId VARCHAR(255) not null,
 artistId VARCHAR(255) not null,
 primary key(albumId, artistId),
-foreign key(albumId) references albums(id),
-foreign key(artistId) references artists(id)
+foreign key(albumId) references albums(id) ON DELETE CASCADE,
+foreign key(artistId) references artists(id) ON DELETE CASCADE
 );
 
 INSERT INTO album_artists (artistId, albumId) VALUES

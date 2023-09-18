@@ -1,7 +1,23 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { getAllArtists, getAllAlbums, getArtistById, getAlbumById, getAllTracks, getTrackById, getAlbumsByArtistId, getTracksByAlbumId, getTracksByArtistId } from "./controllers.js";
+import {
+  getAllArtists,
+  getAllAlbums,
+  getArtistById,
+  getAlbumById,
+  getAllTracks,
+  getTrackById,
+  getAlbumsByArtistId,
+  getTracksByAlbumId,
+  getTracksByArtistId,
+  deleteArtistById,
+  deleteAlbumById,
+  deleteTrackById,
+  updateArtistById,
+  updateAlbumById,
+  updateTrackById,
+} from "./controllers.js";
 
 const app = express();
 const port = 5000;
@@ -30,6 +46,18 @@ app.get("/artists/:id/albums", getAlbumsByArtistId);
 app.get("/albums/:id/tracks", getTracksByAlbumId);
 
 app.get("/artists/:id/tracks", getTracksByArtistId);
+
+app.delete("/artists/:id", deleteArtistById);
+
+app.delete("/albums/:id", deleteAlbumById);
+
+app.delete("/tracks/:id", deleteTrackById);
+
+app.put("/artists/:id", updateArtistById);
+
+app.put("/albums/:id", updateAlbumById);
+
+app.put("/tracks/:id", updateTrackById);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
