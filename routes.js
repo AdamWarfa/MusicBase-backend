@@ -11,9 +11,9 @@ import {
   getAlbumsByArtistId,
   getTracksByAlbumId,
   getTracksByArtistId,
-  deleteArtistById,
-  deleteAlbumById,
-  deleteTrackById,
+  // deleteArtistById,
+  // deleteAlbumById,
+  // deleteTrackById,
   updateArtistById,
   updateAlbumById,
   updateTrackById,
@@ -62,11 +62,11 @@ app.put("/albums/:id", updateAlbumById);
 
 app.put("/tracks/:id", updateTrackById);
 
-app.delete("/artists/:id", deleteArtistById);
+// app.delete("/artists/:id", deleteArtistById);
 
-app.delete("/albums/:id", deleteAlbumById);
+// app.delete("/albums/:id", deleteAlbumById);
 
-app.delete("/tracks/:id", deleteTrackById);
+// app.delete("/tracks/:id", deleteTrackById);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
