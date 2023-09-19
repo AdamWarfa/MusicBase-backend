@@ -3,7 +3,7 @@ import db from "./database.js";
 import { v4 as uuidv4 } from "uuid";
 
 function getAllArtists(req, res) {
-  const query = "SELECT * FROM artists ORDER BY artistName;";
+  const query = /*SQL*/ `SELECT * FROM artists ORDER BY artistName;`;
   db.query(query, (error, results, fields) => {
     if (error) {
       console.log(error);
@@ -14,7 +14,7 @@ function getAllArtists(req, res) {
 }
 
 function getAllAlbums(req, res) {
-  const query = "SELECT * FROM albums ORDER BY albumTitle;";
+  const query = /*SQL*/ `SELECT * FROM albums ORDER BY albumTitle;`;
   db.query(query, (error, results, fields) => {
     if (error) {
       console.log(error);
@@ -26,7 +26,7 @@ function getAllAlbums(req, res) {
 
 function getArtistById(req, res) {
   const id = req.params.id;
-  const query = "SELECT * FROM artists WHERE id = ?;";
+  const query = /*SQL*/ `SELECT * FROM artists WHERE id = ?;`;
   const values = [id];
   db.query(query, values, (error, results, fields) => {
     if (error) {
@@ -39,7 +39,7 @@ function getArtistById(req, res) {
 
 async function getAlbumById(req, res) {
   const id = req.params.id;
-  const query = "SELECT * FROM albums WHERE id = ?;";
+  const query = /*SQL*/ `SELECT * FROM albums WHERE id = ?;`;
   const values = [id];
   db.query(query, values, (error, results, fields) => {
     if (error) {
@@ -51,7 +51,7 @@ async function getAlbumById(req, res) {
 }
 
 async function getAllTracks(req, res) {
-  const query = "SELECT * FROM tracks ORDER BY trackName;";
+  const query = /*SQL*/ `SELECT * FROM tracks ORDER BY trackName;`;
   db.query(query, (error, results, fields) => {
     if (error) {
       console.log(error);
@@ -67,7 +67,7 @@ async function getAllTracks(req, res) {
 
 async function getTrackById(req, res) {
   const id = req.params.id;
-  const query = "SELECT * FROM tracks WHERE id = ?;";
+  const query = /*SQL*/ `SELECT * FROM tracks WHERE id = ?;`;
   const values = [id];
   db.query(query, values, (error, results, fields) => {
     if (error) {
@@ -80,7 +80,7 @@ async function getTrackById(req, res) {
 
 async function getAlbumsByArtistId(req, res) {
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   SELECT *
   FROM album_artists 
   JOIN albums ON album_artists.albumId = albums.id
@@ -99,7 +99,7 @@ async function getAlbumsByArtistId(req, res) {
 
 async function getTracksByAlbumId(req, res) {
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   SELECT *
   FROM album_tracks
   JOIN albums ON album_tracks.albumId = albums.id
@@ -118,7 +118,7 @@ async function getTracksByAlbumId(req, res) {
 
 async function getTracksByArtistId(req, res) {
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   SELECT *
   FROM artist_tracks
   JOIN artists ON artist_tracks.artistId = artists.id
@@ -138,7 +138,7 @@ async function getTracksByArtistId(req, res) {
 async function postArtist(req, res) {
   const artist = req.body;
   const artistId = uuidv4();
-  const query = ` 
+  const query = /*SQL*/ ` 
   INSERT INTO artists (artistName, artistImage, shortDescription, id)
   VALUES (?, ?, ?, ?);
   `;
@@ -153,39 +153,16 @@ async function postArtist(req, res) {
   });
 }
 
-async function postTrack(req, res) {
-  const track = req.body;
-  const trackId = uuidv4();
-  const query = `
-  INSERT INTO tracks (trackName, id)
-  VALUES (?, ?);
-  INSERT INTO artist_tracks (artistId, trackId)
-  VALUES (?, ?);
-  `;
-
-  const values = [track.trackName, trackId, track.artistId, trackId];
-  db.query(query, values, (error, results, fields) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Track added");
-      res.json(results);
-    }
-  });
-}
-
 async function postAlbum(req, res) {
   const album = req.body;
   const albumId = uuidv4();
-  const query = `
+  const query = /*SQL*/ `
   INSERT INTO albums (albumTitle, yearPublished, albumCover, id)
   VALUES (?, ?, ?, ?);
   INSERT INTO album_artists (albumId, artistId)
   VALUES (?, ?);
-  INSERT INTO album_tracks (albumId, trackId)
-  VALUES (?, ?);
   `;
-  const values = [album.albumTitle, album.yearPublished, album.albumCover, albumId, albumId, album.artistId, albumId, album.trackId];
+  const values = [album.albumTitle, album.yearPublished, album.albumCover, albumId, albumId, album.artistId];
   db.query(query, values, (error, results, fields) => {
     if (error) {
       console.log(error);
@@ -196,10 +173,33 @@ async function postAlbum(req, res) {
   });
 }
 
+async function postTrack(req, res) {
+  const track = req.body;
+  const trackId = uuidv4();
+  const query = /*SQL*/ `
+  INSERT INTO tracks (trackName, id)
+  VALUES (?, ?);
+  INSERT INTO artist_tracks (artistId, trackId)
+  VALUES (?, ?);
+  INSERT INTO album_tracks (albumId, trackId)
+  VALUES (?, ?);
+  `;
+
+  const values = [track.trackName, trackId, track.artistId, trackId, track.albumId, trackId];
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Track added");
+      res.json(results);
+    }
+  });
+}
+
 async function updateArtistById(req, res) {
   console.log(req.body);
   const { id, artistName, artistImage, shortDescription } = req.body;
-  const query = `UPDATE artists SET artistName = ?, artistImage = ?, shortDescription = ? WHERE id = ?`;
+  const query = /*SQL*/ `UPDATE artists SET artistName = ?, artistImage = ?, shortDescription = ? WHERE id = ?`;
   const values = [artistName, artistImage, shortDescription, id];
 
   db.query(query, values, (error, results, fields) => {
@@ -214,7 +214,7 @@ async function updateArtistById(req, res) {
 async function updateAlbumById(req, res) {
   console.log(req.body);
   const { id, albumName, yearPublished, albumImage } = req.body;
-  const query = `UPDATE albums SET name = ?, yearPublished = ?, albumImage = ? WHERE id = ?`;
+  const query = /*SQL*/ `UPDATE albums SET name = ?, yearPublished = ?, albumImage = ? WHERE id = ?`;
   const values = [albumName, yearPublished, albumImage, id];
 
   db.query(query, values, (error, results, fields) => {
@@ -228,7 +228,7 @@ async function updateAlbumById(req, res) {
 async function updateTrackById(req, res) {
   console.log(req.body);
   const { id, trackName } = req.body;
-  const query = `UPDATE tracks SET trackName = ? WHERE id = ?`;
+  const query = /*SQL*/ `UPDATE tracks SET trackName = ? WHERE id = ?`;
   const values = [trackName, id];
 
   db.query(query, values, (error, results, fields) => {
@@ -243,7 +243,7 @@ async function updateTrackById(req, res) {
 async function deleteArtistById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   DELETE FROM artist_tracks WHERE artistId = ?;
   DELETE FROM album_artists WHERE artistId = ?;
   DELETE FROM artists WHERE id = ?;
@@ -254,7 +254,7 @@ async function deleteArtistById(req, res) {
 async function deleteAlbumById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   DELETE FROM album_tracks WHERE albumId = ?;
   DELETE FROM album_artists WHERE albumId = ?;
   DELETE FROM albums WHERE id = ?;
@@ -265,7 +265,7 @@ async function deleteAlbumById(req, res) {
 async function deleteTrackById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = `
+  const query = /*SQL*/ `
   DELETE FROM album_tracks WHERE trackId = ?;
   DELETE FROM artist_tracks WHERE trackId = ?;
   DELETE FROM tracks WHERE id = ?;
