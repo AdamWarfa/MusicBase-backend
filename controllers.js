@@ -78,6 +78,30 @@ async function getTrackById(req, res) {
   });
 }
 
+function preparePostData(results) {
+  const albumWithTracks = {};
+
+  for (const album of results) {
+    if (!albumWithTracks[album.id]) {
+      albumWithTracks[album.id] = {
+        id: album.id,
+        albumTitle: album.albumTitle,
+        yearPublished: album.yearPublished,
+        albumCover: album.albumCover,
+        artistId: album.artistId,
+        artistName: album.artistName,
+        shortDescription: album.shortDescription,
+        tracks: [],
+      };
+    }
+    albumWithTracks[album.id].tracks.push({
+      id: album.trackId,
+      trackName: album.trackName,
+    });
+  }
+  return Object.values(albumWithTracks);
+}
+
 async function getAlbumsByArtistId(req, res) {
   const id = req.params.id;
   const query = /*SQL*/ `
@@ -92,7 +116,8 @@ async function getAlbumsByArtistId(req, res) {
     if (error) {
       console.log(error);
     } else {
-      res.json(results);
+      const albums = preparePostData(results);
+      res.json(albums);
     }
   });
 }
