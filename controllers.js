@@ -14,12 +14,22 @@ function getAllArtists(req, res) {
 }
 
 function getAllAlbums(req, res) {
-  const query = /*SQL*/ `SELECT * FROM albums ORDER BY albumTitle;`;
+  const query = /*SQL*/ `
+  SELECT albums.*,
+  tracks.id AS trackId,
+  tracks.trackName AS trackName
+  FROM albums 
+JOIN album_tracks 
+ON albums.id = album_tracks.albumId
+JOIN tracks 
+ON album_tracks.trackId = tracks.id
+  `;
   db.query(query, (error, results, fields) => {
     if (error) {
       console.log(error);
     } else {
-      res.json(results);
+      const albums = prepareAlbumData(results);
+      res.json(albums);
     }
   });
 }
@@ -88,14 +98,11 @@ function prepareAlbumData(results) {
         albumTitle: album.albumTitle,
         yearPublished: album.yearPublished,
         albumCover: album.albumCover,
-        artistId: album.artistId,
-        artistName: album.artistName,
-        shortDescription: album.shortDescription,
         tracks: [],
       };
     }
     albumWithTracks[album.id].tracks.push({
-      id: album.trackId,
+      trackId: album.trackId,
       trackName: album.trackName,
     });
   }
@@ -265,38 +272,65 @@ async function updateTrackById(req, res) {
   });
 }
 
-// async function deleteArtistById(req, res) {
-//   console.log(req.params.id);
-//   const id = req.params.id;
-//   const query = /*SQL*/ `
-//   DELETE FROM artist_tracks WHERE artistId = ?;
-//   DELETE FROM album_artists WHERE artistId = ?;
-//   DELETE FROM artists WHERE id = ?;
-//   `;
-//   const values = [id, id, id];
-// }
+async function deleteArtistById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = /*SQL*/ `
+  DELETE FROM artist_tracks WHERE artistId = ?;
+  DELETE FROM album_artists WHERE artistId = ?;
+  DELETE FROM artists WHERE id = ?;
+  `;
+  const values = [id, id, id];
 
-// async function deleteAlbumById(req, res) {
-//   console.log(req.params.id);
-//   const id = req.params.id;
-//   const query = /*SQL*/ `
-//   DELETE FROM album_tracks WHERE albumId = ?;
-//   DELETE FROM album_artists WHERE albumId = ?;
-//   DELETE FROM albums WHERE id = ?;
-//   `;
-//   const values = [id, id, id];
-// }
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Artist ${id} deleted`);
+      res.json(results);
+    }
+  });
+}
 
-// async function deleteTrackById(req, res) {
-//   console.log(req.params.id);
-//   const id = req.params.id;
-//   const query = /*SQL*/ `
-//   DELETE FROM album_tracks WHERE trackId = ?;
-//   DELETE FROM artist_tracks WHERE trackId = ?;
-//   DELETE FROM tracks WHERE id = ?;
-//   `;
-//   const values = [id, id, id];
-// }
+async function deleteAlbumById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = /*SQL*/ `
+  DELETE FROM album_tracks WHERE albumId = ?;
+  DELETE FROM album_artists WHERE albumId = ?;
+  DELETE FROM albums WHERE id = ?;
+  `;
+  const values = [id, id, id];
+
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Album  ${id} deleted`);
+      res.json(results);
+    }
+  });
+}
+
+async function deleteTrackById(req, res) {
+  console.log(req.params.id);
+  const id = req.params.id;
+  const query = /*SQL*/ `
+  DELETE FROM album_tracks WHERE trackId = ?;
+  DELETE FROM artist_tracks WHERE trackId = ?;
+  DELETE FROM tracks WHERE id = ?;
+  `;
+  const values = [id, id, id];
+
+  db.query(query, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Track ${id} deleted`);
+      res.json(results);
+    }
+  });
+}
 
 export {
   getAllArtists,
@@ -311,9 +345,9 @@ export {
   postArtist,
   postTrack,
   postAlbum,
-  // deleteArtistById,
-  // deleteAlbumById,
-  // deleteTrackById,
+  deleteArtistById,
+  deleteAlbumById,
+  deleteTrackById,
   updateArtistById,
   updateAlbumById,
   updateTrackById,
