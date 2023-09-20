@@ -231,7 +231,7 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '3455eddf-62d7-40cc-925f-14a78b361dae'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
-() 
+
 
 
 CREATE TABLE artist_tracks (
