@@ -78,7 +78,7 @@ async function getTrackById(req, res) {
   });
 }
 
-function preparePostData(results) {
+function prepareAlbumData(results) {
   const albumWithTracks = {};
 
   for (const album of results) {
@@ -116,8 +116,7 @@ async function getAlbumsByArtistId(req, res) {
     if (error) {
       console.log(error);
     } else {
-      const albums = preparePostData(results);
-      res.json(albums);
+      res.json(results);
     }
   });
 }
@@ -136,7 +135,8 @@ async function getTracksByAlbumId(req, res) {
     if (error) {
       console.log(error);
     } else {
-      res.json(results);
+      const albums = prepareAlbumData(results);
+      res.json(albums);
     }
   });
 }
