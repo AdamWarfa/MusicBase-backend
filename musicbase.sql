@@ -43,6 +43,7 @@ trackName VARCHAR(255)
 );
 
 INSERT INTO tracks (id, trackName) VALUES
+-- Adele, 21
 ('a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e','Rolling in the Deep'),
 ('b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e','Rumour Has It'),
 ('a5224f30-7622-481f-8486-26e8eb40dd1e','Someone like You'),
@@ -54,6 +55,19 @@ INSERT INTO tracks (id, trackName) VALUES
 ('33270b2e-efb1-4026-8ca1-8b4ad8c11297','I''ll Be Waiting'),
 ('6ecf819c-6de4-4f1a-ba93-c03d3a5f71eb','One and Only'),
 ('caa6f1a3-c9b3-4570-9263-411d40482c83','Lovesong'),
+-- Adele, 25
+('1948ef5d-cb29-4a38-8f6c-73bf38492c1a', 'Hello'),
+('63a63563-e14e-41e9-877d-53e4823cf088', 'Send My Love (To Your New Lover)'),
+('aa97041a-34f1-4427-8b13-68817cd34306', 'I Miss You'),
+('ec03d867-96cf-4f39-b547-378b1719c508', 'When We Were Young'),
+('89091d59-52c7-43f4-8852-7ad91e9a9871', 'Remedy'),
+('3c62057b-d8e1-452c-98c7-daf1c62a8102', 'Water Under the Bridge'),
+('a813efce-4ea0-4711-b870-964944f07556', 'River Lea'),
+('ccd2d88f-509b-4b62-9432-28bb8ea67e8d', 'Love in the Dark'),
+('ce0ccab4-54bf-48aa-b5e9-12f09cd8104e', 'Million Years Ago'),
+('e25c225b-6629-4646-897f-9064a99e5a2d', 'All I Ask'),
+('f53a5ae1-14ff-4a84-94bb-39d1ec90d21b', 'Sweetest Devotion'),
+-- Ed Sheeran, Divide
 ('c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e','Eraser'),
 ('d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e','Castle on the Hill'),
 ('c574d0c8-3d35-4898-a40a-6aa3bb0cb417','dive'),
@@ -69,7 +83,85 @@ INSERT INTO tracks (id, trackName) VALUES
 ('30a93505-8d94-4cdb-a1a8-94c1618208d6','Barcelona'),
 ('f863d365-fbdf-4e2f-a330-c934b91ce8ba','Bibia Be Ye Ye'),
 ('80b90811-2ecf-42c0-9a67-344bacd70af2', 'Nancy Mulligan'),
-('88909321-f718-4eed-b1bf-d33a1ce2a94c','Save Myself');
+('88909321-f718-4eed-b1bf-d33a1ce2a94c','Save Myself'),
+-- Ed Sheeran, Multiply
+('0fb41cfc-28c8-46ef-b117-8ebe125a1589', 'One'),
+('a9282307-4a4f-49a6-b5a2-d85f355d3817', 'I''m a Mess'),
+('d799bd21-be4b-44f8-ab80-3140708412fa', 'Sing'),
+('a539fa7e-8224-476d-bc41-dc7d2401c945', 'Don''t'),
+('75552412-756f-432c-8ca0-f095b33be3de', 'Nina'),
+('2d7ccd0a-272e-4dc1-9252-f4ad9f10e6f5', 'Photograph'),
+('8be747ba-f1f2-4078-8483-c4e386f67e01', 'Bloodstream'),
+('2f8240a7-3fc8-482d-9016-479207d3fd6a', 'Tenerife Sea'),
+('845ab914-b1ce-41c4-9f30-432225b08501', 'Runaway'),
+('4e19989b-0513-40ac-a0f8-79438043bbfc', 'The Man'),
+('835803df-3153-4d4a-8c1e-c59cb5a64662', 'Thinking Out Loud'),
+('5955f719-6d5e-49b2-8509-f125c982ff26', 'Afire Love'),
+-- Dave, Psychodrama
+('87271e11-1808-4daa-ba24-be9c1ae3e739', 'Psycho'),
+('0f43ef89-b9df-40d2-a3fb-6d34a04e60ff', 'Streatham'),
+('e2f50063-6df2-4794-a3a1-6097500ac592', 'Black'),
+('2bccd48a-79fd-4696-9355-e2b364593860','Purple Heart'),
+('ea3eb7cb-0a7f-4b21-976a-8f3fc7e757a0', 'Location'),
+('e43cf596-61e4-4d93-8852-22674d8a10a7', 'Disaster'),
+('1cbba231-5fd8-418b-b0d6-d4db8583fb84', 'Screwface Capital'),
+('503078bc-77ba-4790-9c29-99da533a450b', 'Environment'),
+('c4b61bc1-d321-46c4-8578-896ae18edfbd', 'Lesley'),
+('b8da0a1d-8d09-4369-8007-3e373f54697a', 'Voices'),
+('118a25fa-3daa-4574-9730-6097e3c2dc34', 'Drama');
+
+-- Dave, We're All Alone In This Together
+('a481d7ba-eaaa-42cc-bc78-913869c613e0','We''re All Alone'),
+('9cca914d-21bc-4467-aeb9-745e2ee797de','Verdansk'),
+('76abce77-4e3c-47af-9845-4d59082944ce','Clash'),
+('a80e9174-61eb-444e-b9e5-ba7e483185b0', 'In The Fire'),
+('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'Three Rivers'),
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'System'),
+('10617137-f427-49f1-821c-3d2af31200ed', 'Lazarus'),
+('a3ef208f-99f2-4036-8077-ef76374342b9','Law Of Attraction'),
+('4e6f96ac-4eb1-41a4-8dbd-b642da19c7b4','Both Side Of A Smile'),
+('619f66dc-5dfa-4c44-886d-c5449a5402aa','Twenty To One'),
+('f047ba54-1990-436c-a7a8-0945952c3eea','Heart Attack'),
+('5849ed8a-de4e-496f-a148-eedb17f45b88', 'Survivors''s Guilt'),
+
+-- Central Cee, 23
+('552d2095-c2df-4407-868e-31f90fe060d6', 'Khabib'),
+('0eaf5aa9-5e0c-4272-b6da-be21f8b267b4', 'Straight Back to It'),
+('a83968b2-528d-4dcb-aedb-29ea5465f81b', 'Ungrateful'),
+('38213845-acd5-4b64-8266-cba2d8462342', 'Bunda'),
+("8fd65b5c-afbd-41e1-8936-62101a8390ea", 'Retail Therapy'),
+("23472b10-d847-4dc3-b1ec-491addc13399", 'Eurovision'),
+("a331646b-b52c-42a2-b9c0-7bfc1c73d1fa", 'Cold Shoulder'),
+("c69666e2-d248-4e85-9410-6f1b505ff6de", 'Mrs'),
+("69379210-1f28-4746-b7d4-1cb1ddfa98bc", 'Air Bnb'),
+("95ad9eea-c3de-45fa-b07e-f45fb443c6b5", 'No Pain'),
+("87cf9945-1199-4310-a394-597c16fe6457", 'Terminal 5'),
+("fbaf6693-5216-4ef0-8f3a-b287653f9367", 'Obsessed With You'),
+("3a02580d-9af8-48b4-8798-5f2f7f2071ed", '8 Ball'),
+("81748286-be71-4275-8595-b82417ffc771", 'Lil Bro'),
+("bf1caa67-d5bd-434c-87cf-dfeed5b08139", 'End of the Beginning'),
+
+-- Central Cee, Wild West
+('a2345178-42b8-4df0-8ac6-5d051b15b03e','6 For 6'),
+('1b52f92c-44b4-435d-99cc-4e5cc5d8d8f2', 'Fraud'),
+('f7276fa9-f73c-4c87-8812-0885a1c2c7bb', 'Pinging (6 Figures)'),
+('0c4eda56-9af5-43c8-a9ab-2f96e418f111', 'The Bag'),
+('b7e6cb2e-c42a-4af9-9410-5d55b7f0d030', 'Day In The Life'),
+('826c5fb5-57e1-48a5-9904-503df62a2395', 'Dun Deal'),
+('f1c6472b-d15c-47b8-9295-7eaa7ed77e1b', 'Commintment Issues'),
+('f16f1823-a606-40dc-b8fa-0b7b28a094f6', 'Sex Money Drugs'), 
+('7fbccdb0-dee2-4b11-aef8-8c6c070623f5', 'Ruby'),
+('4d829324-aa79-489b-aace-53530c595895', 'Hate it Or Luv It'), 
+('add377ad-1ad7-43f3-8fca-b41004430534', 'Xmas Eve'),
+('0ad25b60-7594-4aa3-b7b1-ffde9b1e5a03', 'Loading'), 
+('e66d85cb-2a3c-4d61-a612-23df477a1838', 'Tension'), 
+('8fd65b5c-afbd-41e1-8936-62101a8390ea', 'Gangbiz'),
+
+-- Central Cee & Dave, Split Decision
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'Trojan Horse'),
+('3455eddf-62d7-40cc-925f-14a78b361dae', 'Sprinter'),
+('e7323ee2-d0c6-47cd-bc98-2e8c6d06d647', 'Our 25th Birthday'),
+('34c87bf6-36bf-4ac0-8c8a-80b2bf51e424', 'UK Rap')
 
 CREATE TABLE album_tracks (
 albumId VARCHAR(255) not null,
@@ -80,6 +172,7 @@ foreign key(trackId) references tracks(id) ON DELETE CASCADE
 );
 
 INSERT INTO album_tracks (albumId, trackId) VALUES
+-- Adele, 21
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','a5224f30-7622-481f-8486-26e8eb40dd1e'),
@@ -91,6 +184,19 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','33270b2e-efb1-4026-8ca1-8b4ad8c11297'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','6ecf819c-6de4-4f1a-ba93-c03d3a5f71eb'),
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','caa6f1a3-c9b3-4570-9263-411d40482c83'),
+-- Adele, 25
+('dbed2506-da74-4b93-b476-f1580302feb2', '1948ef5d-cb29-4a38-8f6c-73bf38492c1a'),
+('dbed2506-da74-4b93-b476-f1580302feb2', '63a63563-e14e-41e9-877d-53e4823cf088'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'aa97041a-34f1-4427-8b13-68817cd34306'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'ec03d867-96cf-4f39-b547-378b1719c508'),
+('dbed2506-da74-4b93-b476-f1580302feb2', '89091d59-52c7-43f4-8852-7ad91e9a9871'),
+('dbed2506-da74-4b93-b476-f1580302feb2', '3c62057b-d8e1-452c-98c7-daf1c62a8102'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'a813efce-4ea0-4711-b870-964944f07556'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'ccd2d88f-509b-4b62-9432-28bb8ea67e8d'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'ce0ccab4-54bf-48aa-b5e9-12f09cd8104e'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'e25c225b-6629-4646-897f-9064a99e5a2d'),
+('dbed2506-da74-4b93-b476-f1580302feb2', 'f53a5ae1-14ff-4a84-94bb-39d1ec90d21b'),
+-- Ed Sheeran, Divide
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','c574d0c8-3d35-4898-a40a-6aa3bb0cb417'),
@@ -106,7 +212,26 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','30a93505-8d94-4cdb-a1a8-94c1618208d6'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','f863d365-fbdf-4e2f-a330-c934b91ce8ba'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','80b90811-2ecf-42c0-9a67-344bacd70af2'),
-('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','88909321-f718-4eed-b1bf-d33a1ce2a94c');
+('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','88909321-f718-4eed-b1bf-d33a1ce2a94c'),
+-- Ed Sheeran, Multiply
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '0fb41cfc-28c8-46ef-b117-8ebe125a1589'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'a9282307-4a4f-49a6-b5a2-d85f355d3817'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'd799bd21-be4b-44f8-ab80-3140708412fa'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'a539fa7e-8224-476d-bc41-dc7d2401c945'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '75552412-756f-432c-8ca0-f095b33be3de'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '2d7ccd0a-272e-4dc1-9252-f4ad9f10e6f5'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '8be747ba-f1f2-4078-8483-c4e386f67e01'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '2f8240a7-3fc8-482d-9016-479207d3fd6a'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '845ab914-b1ce-41c4-9f30-432225b08501'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '4e19989b-0513-40ac-a0f8-79438043bbfc'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '835803df-3153-4d4a-8c1e-c59cb5a64662'),
+('2e7ad4e0-865a-49db-ac98-9031095a4b7c', '5955f719-6d5e-49b2-8509-f125c982ff26'),
+-- Central Cee & Dave, Split Decision
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '3455eddf-62d7-40cc-925f-14a78b361dae'),
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
+() 
 
 
 CREATE TABLE artist_tracks (
@@ -119,6 +244,7 @@ foreign key(trackId) references tracks(id) ON DELETE CASCADE
 
 
 INSERT INTO artist_tracks( artistId, trackId) VALUES
+-- Adele
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','a1b2c3d4-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','b2c3d4e5-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','a5224f30-7622-481f-8486-26e8eb40dd1e'),
@@ -130,6 +256,7 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','33270b2e-efb1-4026-8ca1-8b4ad8c11297'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','6ecf819c-6de4-4f1a-ba93-c03d3a5f71eb'),
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','caa6f1a3-c9b3-4570-9263-411d40482c83'),
+-- Ed Sheeran
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','c574d0c8-3d35-4898-a40a-6aa3bb0cb417'),
@@ -146,6 +273,18 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','f863d365-fbdf-4e2f-a330-c934b91ce8ba'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','80b90811-2ecf-42c0-9a67-344bacd70af2'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','88909321-f718-4eed-b1bf-d33a1ce2a94c');
+-- Central Cee
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '3455eddf-62d7-40cc-925f-14a78b361dae'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424')
+-- Dave
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '3455eddf-62d7-40cc-925f-14a78b361dae'),
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424')
+
+
 
 CREATE TABLE album_artists (
 albumId VARCHAR(255) not null,
@@ -158,3 +297,7 @@ foreign key(artistId) references artists(id) ON DELETE CASCADE
 INSERT INTO album_artists (artistId, albumId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','c78e176f-b8a7-482e-b5d4-f0facf594e60'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d');
+-- Split Decision, Central Cee
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'f1f1c933-8007-4294-bfbe-25fddee181d0')
+-- Split Decision, Dave
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'ec14f6bb-98e5-45a6-9980-92168c95dcb5')
