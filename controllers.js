@@ -123,6 +123,7 @@ async function getAlbumsByArtistId(req, res) {
     if (error) {
       console.log(error);
     } else {
+      res.json(results);
     }
   });
 }
@@ -141,7 +142,8 @@ async function getTracksByAlbumId(req, res) {
     if (error) {
       console.log(error);
     } else {
-      res.json(results);
+      const albums = prepareAlbumData(results);
+      res.json(albums);
     }
   });
 }
