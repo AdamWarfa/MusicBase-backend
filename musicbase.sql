@@ -108,7 +108,7 @@ INSERT INTO tracks (id, trackName) VALUES
 ('503078bc-77ba-4790-9c29-99da533a450b', 'Environment'),
 ('c4b61bc1-d321-46c4-8578-896ae18edfbd', 'Lesley'),
 ('b8da0a1d-8d09-4369-8007-3e373f54697a', 'Voices'),
-('118a25fa-3daa-4574-9730-6097e3c2dc34', 'Drama');
+('118a25fa-3daa-4574-9730-6097e3c2dc34', 'Drama'),
 
 -- Dave, We're All Alone In This Together
 ('a481d7ba-eaaa-42cc-bc78-913869c613e0','We''re All Alone'),
@@ -129,17 +129,17 @@ INSERT INTO tracks (id, trackName) VALUES
 ('0eaf5aa9-5e0c-4272-b6da-be21f8b267b4', 'Straight Back to It'),
 ('a83968b2-528d-4dcb-aedb-29ea5465f81b', 'Ungrateful'),
 ('38213845-acd5-4b64-8266-cba2d8462342', 'Bunda'),
-("8fd65b5c-afbd-41e1-8936-62101a8390ea", 'Retail Therapy'),
-("23472b10-d847-4dc3-b1ec-491addc13399", 'Eurovision'),
-("a331646b-b52c-42a2-b9c0-7bfc1c73d1fa", 'Cold Shoulder'),
-("c69666e2-d248-4e85-9410-6f1b505ff6de", 'Mrs'),
-("69379210-1f28-4746-b7d4-1cb1ddfa98bc", 'Air Bnb'),
-("95ad9eea-c3de-45fa-b07e-f45fb443c6b5", 'No Pain'),
-("87cf9945-1199-4310-a394-597c16fe6457", 'Terminal 5'),
-("fbaf6693-5216-4ef0-8f3a-b287653f9367", 'Obsessed With You'),
-("3a02580d-9af8-48b4-8798-5f2f7f2071ed", '8 Ball'),
-("81748286-be71-4275-8595-b82417ffc771", 'Lil Bro'),
-("bf1caa67-d5bd-434c-87cf-dfeed5b08139", 'End of the Beginning'),
+('8fd65b5c-afbd-41e1-8936-62101a8390ea', 'Retail Therapy'),
+('23472b10-d847-4dc3-b1ec-491addc13399', 'Eurovision'),
+('a331646b-b52c-42a2-b9c0-7bfc1c73d1fa', 'Cold Shoulder'),
+('c69666e2-d248-4e85-9410-6f1b505ff6de', 'Mrs'),
+('69379210-1f28-4746-b7d4-1cb1ddfa98bc', 'Air Bnb'),
+('95ad9eea-c3de-45fa-b07e-f45fb443c6b5', 'No Pain'),
+('87cf9945-1199-4310-a394-597c16fe6457', 'Terminal 5'),
+('fbaf6693-5216-4ef0-8f3a-b287653f9367', 'Obsessed With You'),
+('3a02580d-9af8-48b4-8798-5f2f7f2071ed', '8 Ball'),
+('81748286-be71-4275-8595-b82417ffc771', 'Lil Bro'),
+('bf1caa67-d5bd-434c-87cf-dfeed5b08139', 'End of the Beginning'),
 
 -- Central Cee, Wild West
 ('a2345178-42b8-4df0-8ac6-5d051b15b03e','6 For 6'),
@@ -161,7 +161,7 @@ INSERT INTO tracks (id, trackName) VALUES
 ('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'Trojan Horse'),
 ('3455eddf-62d7-40cc-925f-14a78b361dae', 'Sprinter'),
 ('e7323ee2-d0c6-47cd-bc98-2e8c6d06d647', 'Our 25th Birthday'),
-('34c87bf6-36bf-4ac0-8c8a-80b2bf51e424', 'UK Rap')
+('34c87bf6-36bf-4ac0-8c8a-80b2bf51e424', 'UK Rap');
 
 CREATE TABLE album_tracks (
 albumId VARCHAR(255) not null,
@@ -230,8 +230,8 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '3455eddf-62d7-40cc-925f-14a78b361dae'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
-() 
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424');
+
 
 
 CREATE TABLE artist_tracks (
@@ -272,17 +272,17 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','30a93505-8d94-4cdb-a1a8-94c1618208d6'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','f863d365-fbdf-4e2f-a330-c934b91ce8ba'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','80b90811-2ecf-42c0-9a67-344bacd70af2'),
-('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','88909321-f718-4eed-b1bf-d33a1ce2a94c');
+('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','88909321-f718-4eed-b1bf-d33a1ce2a94c'),
 -- Central Cee
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', '3455eddf-62d7-40cc-925f-14a78b361dae'),
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
-('f1f1c933-8007-4294-bfbe-25fddee181d0', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424')
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
 -- Dave
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '3455eddf-62d7-40cc-925f-14a78b361dae'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
-('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424')
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424');
 
 
 
@@ -296,8 +296,8 @@ foreign key(artistId) references artists(id) ON DELETE CASCADE
 
 INSERT INTO album_artists (artistId, albumId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','c78e176f-b8a7-482e-b5d4-f0facf594e60'),
-('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d');
+('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d'),
 -- Split Decision, Central Cee
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'f1f1c933-8007-4294-bfbe-25fddee181d0')
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'f1f1c933-8007-4294-bfbe-25fddee181d0'),
 -- Split Decision, Dave
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'ec14f6bb-98e5-45a6-9980-92168c95dcb5')
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'ec14f6bb-98e5-45a6-9980-92168c95dcb5');
