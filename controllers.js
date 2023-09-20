@@ -14,12 +14,22 @@ function getAllArtists(req, res) {
 }
 
 function getAllAlbums(req, res) {
-  const query = /*SQL*/ `SELECT * FROM albums ORDER BY albumTitle;`;
+  const query = /*SQL*/ `
+  SELECT albums.*,
+  tracks.id AS trackId,
+  tracks.trackName AS trackName
+  FROM albums 
+JOIN album_tracks 
+ON albums.id = album_tracks.albumId
+JOIN tracks 
+ON album_tracks.trackId = tracks.id
+  `;
   db.query(query, (error, results, fields) => {
     if (error) {
       console.log(error);
     } else {
-      res.json(results);
+      const albums = prepareAlbumData(results);
+      res.json(albums);
     }
   });
 }
@@ -78,7 +88,7 @@ async function getTrackById(req, res) {
   });
 }
 
-function preparePostData(results) {
+function prepareAlbumData(results) {
   const albumWithTracks = {};
 
   for (const album of results) {
@@ -88,14 +98,11 @@ function preparePostData(results) {
         albumTitle: album.albumTitle,
         yearPublished: album.yearPublished,
         albumCover: album.albumCover,
-        artistId: album.artistId,
-        artistName: album.artistName,
-        shortDescription: album.shortDescription,
         tracks: [],
       };
     }
     albumWithTracks[album.id].tracks.push({
-      id: album.trackId,
+      trackId: album.trackId,
       trackName: album.trackName,
     });
   }
@@ -116,8 +123,6 @@ async function getAlbumsByArtistId(req, res) {
     if (error) {
       console.log(error);
     } else {
-      const albums = preparePostData(results);
-      res.json(albums);
     }
   });
 }
