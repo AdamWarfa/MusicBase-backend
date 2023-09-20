@@ -298,6 +298,6 @@ INSERT INTO album_artists (artistId, albumId) VALUES
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','c78e176f-b8a7-482e-b5d4-f0facf594e60'),
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d'),
 -- Split Decision, Central Cee
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'f1f1c933-8007-4294-bfbe-25fddee181d0'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '3bd28517-c3d3-4578-b99f-f6794ecbcb5b'),
 -- Split Decision, Dave
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'ec14f6bb-98e5-45a6-9980-92168c95dcb5');
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '3bd28517-c3d3-4578-b99f-f6794ecbcb5b');
