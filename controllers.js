@@ -156,9 +156,6 @@ async function getTracksByArtistId(req, res) {
   const id = req.params.id;
   const query = /*SQL*/ `
     SELECT *
-  tracks.id AS trackId,
-  tracks.trackName AS trackName
-  FROM albums 
   FROM artist_tracks
   JOIN artists ON artist_tracks.artistId = artists.id
   JOIN tracks ON artist_tracks.trackId = tracks.id
