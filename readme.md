@@ -35,7 +35,7 @@ Database-tabeller og struktur kan oprettes ved hjælp af migrations og seeder ef
 - Klon dette repository:
 git clone `https://github.com/din-bruger/projekt-x-backend.git`
 - Naviger til projektmappen:
-cd projekt-x-backend 
+cd musicbase-backend
 - Installer afhængigheder: `npm install `
 - Konfigurer miljøvariabler
 Opret en .env-fil i projektroden og konfigurer følgende miljøvariabler:
