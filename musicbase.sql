@@ -28,13 +28,15 @@ albumCover TEXT
 INSERT INTO albums (id, albumTitle, yearPublished, albumCover) VALUES
 ('c78e176f-b8a7-482e-b5d4-f0facf594e60','21', 2011, 'https://ichef.bbci.co.uk/news/466/mcs/media/images/49747000/jpg/_49747558_adele_21_cover_300dpi_251010.jpg'),
 ('dbed2506-da74-4b93-b476-f1580302feb2', '25', 2015, 'https://upload.wikimedia.org/wikipedia/en/9/96/Adele_-_25_%28Official_Album_Cover%29.png'),
-('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','÷ (Divide)', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg'),
+('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','÷ (Divide) Deluxe', 2017, 'https://www.soundcph.dk/wp-content/uploads/2017/12/ed-sheeran-divide-vinyl-cd.jpg'),
 ('2e7ad4e0-865a-49db-ac98-9031095a4b7c', 'x (Multiply)', 2014, 'https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png'),
 ('b40762f3-e435-4f31-b6bd-e284b5146a93', 'Psychodrama', 2019, 'https://upload.wikimedia.org/wikipedia/en/7/75/Dave_Psychodrama.jpeg'),
 ('ac3d0ae1-6dab-4492-97b2-b81621f22e57', 'We''re All Alone In This Together', 2021, 'https://upload.wikimedia.org/wikipedia/en/3/3d/Dave_-_We%27re_All_Alone_in_This_Together.jpg'),
 ('a80e9174-61eb-444e-b9e5-ba7e483185b0', 'Wild West', 2021, 'https://images.genius.com/be2209817e6c0e3060a4c0bf89fb3229.1000x1000x1.png'),
 ('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '23', 2022, 'https://images.genius.com/e2e71c4727c43b794627d6f6e31b603a.1000x1000x1.png'),
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'Split Decision', 2023, 'https://grmdaily.com/wp-content/uploads/2023/06/SPLIT-DECISION.jpg');
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'Split Decision', 2023, 'https://grmdaily.com/wp-content/uploads/2023/06/SPLIT-DECISION.jpg'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1', 'Daves Greatest Hits', 2023, 'https://m.media-amazon.com/images/M/MV5BMmZmNDEyYzktMDUxZS00Mzg5LWFkYTEtYWRkYjcwNWVjY2YxXkEyXkFqcGdeQXVyNTIyNTMyMA@@._V1_.jpg'),
 
 
 CREATE TABLE tracks (
@@ -67,7 +69,8 @@ INSERT INTO tracks (id, trackName) VALUES
 ('ce0ccab4-54bf-48aa-b5e9-12f09cd8104e', 'Million Years Ago'),
 ('e25c225b-6629-4646-897f-9064a99e5a2d', 'All I Ask'),
 ('f53a5ae1-14ff-4a84-94bb-39d1ec90d21b', 'Sweetest Devotion'),
--- Ed Sheeran, Divide
+
+-- Ed Sheeran, Divide 
 ('c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e','Eraser'),
 ('d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e','Castle on the Hill'),
 ('c574d0c8-3d35-4898-a40a-6aa3bb0cb417','dive'),
@@ -80,10 +83,13 @@ INSERT INTO tracks (id, trackName) VALUES
 ('fd648774-1829-4edb-860f-3ce8659058a4','What Do I Know?'),
 ('3deb13c5-fd4f-4f42-bdb1-3bf34f3eec80','How Would You Feel (Paean)'),
 ('2763369c-13aa-42e6-a7ba-b1d8825d21ae','Supermarket Flowers'),
-('30a93505-8d94-4cdb-a1a8-94c1618208d6','Barcelona'),
-('f863d365-fbdf-4e2f-a330-c934b91ce8ba','Bibia Be Ye Ye'),
-('80b90811-2ecf-42c0-9a67-344bacd70af2', 'Nancy Mulligan'),
-('88909321-f718-4eed-b1bf-d33a1ce2a94c','Save Myself'),
+
+-- Ed Sheeran, Divide Deluxe 
+('92228a65-cd53-4180-be78-dc7836f2ba3d','Barcelona'),
+('012c3a4b-b918-4c34-88f4-0817014f853f','Bibia Be Ye Ye'),
+('76524ac9-20ea-49b2-872e-887608cea5c6', 'Nancy Mulligan'),
+('d2cda4e5-f245-4de6-9cc9-46825c306439','Save Myself'),
+
 -- Ed Sheeran, Multiply
 ('0fb41cfc-28c8-46ef-b117-8ebe125a1589', 'One'),
 ('a9282307-4a4f-49a6-b5a2-d85f355d3817', 'I''m a Mess'),
@@ -197,6 +203,19 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('dbed2506-da74-4b93-b476-f1580302feb2', 'e25c225b-6629-4646-897f-9064a99e5a2d'),
 ('dbed2506-da74-4b93-b476-f1580302feb2', 'f53a5ae1-14ff-4a84-94bb-39d1ec90d21b'),
 -- Ed Sheeran, Divide
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','c574d0c8-3d35-4898-a40a-6aa3bb0cb417'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','b3c4d5e6-69c1-4f97-9ac1-d21e1f6c8f5e'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','c4d5e6f7-69c1-4f97-9ac1-d21e1f6c8f5e'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','2b5e2783-4b5a-4fac-aad0-bb1962d787e7'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','432eb3ad-bd80-4cfa-91e5-da3b1abf8fe1'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','a7051b03-a763-4ef0-aae8-72608123ab73'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','ad75e9f9-a11f-4601-8dbc-8bca958ca932'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','fd648774-1829-4edb-860f-3ce8659058a4'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','3deb13c5-fd4f-4f42-bdb1-3bf34f3eec80'),
+('33fe38f3-a92d-453d-84c5-6d7ccc897ffe','2763369c-13aa-42e6-a7ba-b1d8825d21ae'),
+-- Ed Sheeran, Divide (Deluxe)
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','c3d4e5f6-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','d4e5f6g7-69c1-4f97-9ac1-d21e1f6c8f5e'),
 ('76d1426a-840f-48b9-a0d5-e9aa4cd2280d','c574d0c8-3d35-4898-a40a-6aa3bb0cb417'),
@@ -290,10 +309,15 @@ INSERT INTO album_tracks (albumId, trackId) VALUES
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '3455eddf-62d7-40cc-925f-14a78b361dae'),
 ('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
-('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424');
+('3bd28517-c3d3-4578-b99f-f6794ecbcb5b', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
 
-
-
+-- Daves Greatest Hits
+('eb088e62-7756-4620-b9af-f3a925b0ade1','619f66dc-5dfa-4c44-886d-c5449a5402aa'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1','f047ba54-1990-436c-a7a8-0945952c3eea'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1','5849ed8a-de4e-496f-a148-eedb17f45b88'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1','2bccd48a-79fd-4696-9355-e2b364593860'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1','ea3eb7cb-0a7f-4b21-976a-8f3fc7e757a0'),
+('eb088e62-7756-4620-b9af-f3a925b0ade1','e43cf596-61e4-4d93-8852-22674d8a10a7');
 
 CREATE TABLE artist_tracks (
 artistId VARCHAR(255) not null,
@@ -444,6 +468,8 @@ INSERT INTO album_artists (artistId, albumId) VALUES
 -- Adele, 25
 ('d756b6d4-69c1-4f97-9ac1-d21e1f6c8f5e','dbed2506-da74-4b93-b476-f1580302feb2'),
 -- Ed Sheeran, Divide
+('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','33fe38f3-a92d-453d-84c5-6d7ccc897ffe'),
+-- Ed Sheeran, Divide (deluxe)
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','76d1426a-840f-48b9-a0d5-e9aa4cd2280d'),
 -- Ed Sheeran, Multiply
 ('b744da0a-9140-4e88-a6c0-976b6a9e2c6a','2e7ad4e0-865a-49db-ac98-9031095a4b7c'),
@@ -459,4 +485,6 @@ INSERT INTO album_artists (artistId, albumId) VALUES
 -- Central Cee, 23
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', 'e4f7186f-667e-4b0b-b7b9-995812a89f6a'),
 -- Central Cee, Wild West
-('f1f1c933-8007-4294-bfbe-25fddee181d0','a80e9174-61eb-444e-b9e5-ba7e483185b0');
+('f1f1c933-8007-4294-bfbe-25fddee181d0','a80e9174-61eb-444e-b9e5-ba7e483185b0'),
+-- Daves Greatest Hits 
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5','eb088e62-7756-4620-b9af-f3a925b0ade1');
