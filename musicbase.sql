@@ -365,22 +365,22 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
 -- Central Cee, 23
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '552d2095-c2df-4407-868e-31f90fe060d6'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '0eaf5aa9-5e0c-4272-b6da-be21f8b267b4'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'a83968b2-528d-4dcb-aedb-29ea5465f81b'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '38213845-acd5-4b64-8266-cba2d8462342'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '8fd65b5c-afbd-41e1-8936-62101a8390ea'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '23472b10-d847-4dc3-b1ec-491addc13399'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'a331646b-b52c-42a2-b9c0-7bfc1c73d1fa'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'c69666e2-d248-4e85-9410-6f1b505ff6de'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '69379210-1f28-4746-b7d4-1cb1ddfa98bc'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '95ad9eea-c3de-45fa-b07e-f45fb443c6b5'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '87cf9945-1199-4310-a394-597c16fe6457'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'fbaf6693-5216-4ef0-8f3a-b287653f9367'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '3a02580d-9af8-48b4-8798-5f2f7f2071ed'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', '81748286-be71-4275-8595-b82417ffc771'),
-('e4f7186f-667e-4b0b-b7b9-995812a89f6a', 'bf1caa67-d5bd-434c-87cf-dfeed5b08139'),
---Central Cee, Wild West
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '552d2095-c2df-4407-868e-31f90fe060d6'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '0eaf5aa9-5e0c-4272-b6da-be21f8b267b4'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'a83968b2-528d-4dcb-aedb-29ea5465f81b'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '38213845-acd5-4b64-8266-cba2d8462342'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '8fd65b5c-afbd-41e1-8936-62101a8390ea'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '23472b10-d847-4dc3-b1ec-491addc13399'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'a331646b-b52c-42a2-b9c0-7bfc1c73d1fa'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'c69666e2-d248-4e85-9410-6f1b505ff6de'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '69379210-1f28-4746-b7d4-1cb1ddfa98bc'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '95ad9eea-c3de-45fa-b07e-f45fb443c6b5'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '87cf9945-1199-4310-a394-597c16fe6457'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'fbaf6693-5216-4ef0-8f3a-b287653f9367'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '3a02580d-9af8-48b4-8798-5f2f7f2071ed'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', '81748286-be71-4275-8595-b82417ffc771'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0', 'bf1caa67-d5bd-434c-87cf-dfeed5b08139'),
+-- Central Cee, Wild West
 ('f1f1c933-8007-4294-bfbe-25fddee181d0','a2345178-42b8-4df0-8ac6-5d051b15b03e'),
 ('f1f1c933-8007-4294-bfbe-25fddee181d0','1b52f92c-44b4-435d-99cc-4e5cc5d8d8f2'),
 ('f1f1c933-8007-4294-bfbe-25fddee181d0','f7276fa9-f73c-4c87-8812-0885a1c2c7bb'),
@@ -402,7 +402,7 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'e7323ee2-d0c6-47cd-bc98-2e8c6d06d647'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '34c87bf6-36bf-4ac0-8c8a-80b2bf51e424'),
 
---Dave, Psychodrama
+-- Dave, Psychodrama
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5','87271e11-1808-4daa-ba24-be9c1ae3e739'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5','0f43ef89-b9df-40d2-a3fb-6d34a04e60ff'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5','e2f50063-6df2-4794-a3a1-6097500ac592'),
@@ -415,7 +415,7 @@ INSERT INTO artist_tracks( artistId, trackId) VALUES
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5','b8da0a1d-8d09-4369-8007-3e373f54697a'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5','118a25fa-3daa-4574-9730-6097e3c2dc34'),
 
---Dave, We are all in this togehter 
+-- Dave, We are all in this togehter
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'a481d7ba-eaaa-42cc-bc78-913869c613e0'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '9cca914d-21bc-4467-aeb9-745e2ee797de'),
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '76abce77-4e3c-47af-9845-4d59082944ce'),
@@ -450,13 +450,13 @@ INSERT INTO album_artists (artistId, albumId) VALUES
 -- Split Decision, Central Cee
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', '3bd28517-c3d3-4578-b99f-f6794ecbcb5b'),
 -- Split Decision, Dave
-('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '3bd28517-c3d3-4578-b99f-f6794ecbcb5b');
+('ec14f6bb-98e5-45a6-9980-92168c95dcb5', '3bd28517-c3d3-4578-b99f-f6794ecbcb5b'),
 
 -- Dave Psychodrama
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'b40762f3-e435-4f31-b6bd-e284b5146a93'),
--- Dave, We are alone in the together 
+-- Dave, We are alone in the together
 ('ec14f6bb-98e5-45a6-9980-92168c95dcb5', 'ac3d0ae1-6dab-4492-97b2-b81621f22e57'),
 -- Central Cee, 23
 ('f1f1c933-8007-4294-bfbe-25fddee181d0', 'e4f7186f-667e-4b0b-b7b9-995812a89f6a'),
 -- Central Cee, Wild West
-('f1f1c933-8007-4294-bfbe-25fddee181d0','a80e9174-61eb-444e-b9e5-ba7e483185b0'),
+('f1f1c933-8007-4294-bfbe-25fddee181d0','a80e9174-61eb-444e-b9e5-ba7e483185b0');
