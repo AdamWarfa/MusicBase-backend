@@ -131,10 +131,14 @@ async function getAlbumsByArtistId(req, res) {
 async function getTracksByAlbumId(req, res) {
   const id = req.params.id;
   const query = /*SQL*/ `
-  SELECT *
-  FROM album_tracks
-  JOIN albums ON album_tracks.albumId = albums.id
-  JOIN tracks ON album_tracks.trackId = tracks.id
+  SELECT albums.*,
+  tracks.id AS trackId,
+  tracks.trackName AS trackName
+  FROM albums 
+JOIN album_tracks 
+ON albums.id = album_tracks.albumId
+JOIN tracks 
+ON album_tracks.trackId = tracks.id
   WHERE albumId = ?;
   `;
   const values = [id];
@@ -151,7 +155,10 @@ async function getTracksByAlbumId(req, res) {
 async function getTracksByArtistId(req, res) {
   const id = req.params.id;
   const query = /*SQL*/ `
-  SELECT *
+    SELECT albums.*,
+  tracks.id AS trackId,
+  tracks.trackName AS trackName
+  FROM albums 
   FROM artist_tracks
   JOIN artists ON artist_tracks.artistId = artists.id
   JOIN tracks ON artist_tracks.trackId = tracks.id
