@@ -29,7 +29,7 @@ app.use(express.json());
 dotenv.config();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello New World Order!");
 });
 
 app.get("/artists", getAllArtists);
