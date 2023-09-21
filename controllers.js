@@ -155,7 +155,7 @@ ON album_tracks.trackId = tracks.id
 async function getTracksByArtistId(req, res) {
   const id = req.params.id;
   const query = /*SQL*/ `
-    SELECT albums.*,
+    SELECT *
   tracks.id AS trackId,
   tracks.trackName AS trackName
   FROM albums 
