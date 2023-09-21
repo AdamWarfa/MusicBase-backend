@@ -29,7 +29,7 @@ app.use(express.json());
 dotenv.config();
 
 app.get("/", (req, res) => {
-  res.send("MusicBase deployed");
+  res.send("Mashallah deployed");
 });
 
 app.get("/artists", getAllArtists);
