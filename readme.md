@@ -4,7 +4,7 @@ MusicBase er en webbaseret applikation til visning af kunstnere. Den inkluderer 
 
 ### API Routes og Funktioner
 
-## GET /albums
+### Routes
 
 - **Hent en liste over alle albums.**
 - GET /albums/:id
