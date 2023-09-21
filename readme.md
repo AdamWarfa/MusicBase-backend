@@ -4,7 +4,7 @@ MusicBase er en webbaseret applikation til visning af kunstnere. Den inkluderer 
 
 ### API Routes og Funktioner
 
-# GET /albums
+## GET /albums
 
 - **Hent en liste over alle albums.**
 - GET /albums/:id
@@ -32,19 +32,19 @@ Database-tabeller og struktur kan oprettes ved hjælp af migrations og seeder ef
 
 # Trin til opsætning
 
-1.Klon dette repository:
-git clone https://github.com/din-bruger/projekt-x-backend.git 
-2. Naviger til projektmappen:
+- Klon dette repository:
+git clone https://github.com/din-bruger/projekt-x-backend.git
+- Naviger til projektmappen:
 cd projekt-x-backend 
-3. Installer afhængigheder: npm install 
-4. Konfigurer miljøvariabler
+- Installer afhængigheder: npm install 
+- Konfigurer miljøvariabler
 Opret en .env-fil i projektroden og konfigurer følgende miljøvariabler:
 MYSQL_HOST=musicbase.mysql.database.azure.com
 MYSQL_DATABASE=musicbase_db
 MYSQL_USER=musicbase_admin
 MYSQL_PASSWORD=Kea12345
 MYSQL_CERT=true 
-5. Start serveren: npm start
+- Start serveren: npm start
 
 ## Eksempelklient
 
