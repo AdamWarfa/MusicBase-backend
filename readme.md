@@ -2,7 +2,7 @@
 
 MusicBase er en webbaseret applikation til visning af kunstnere. Den inkluderer både et RESTful API til håndtering af kunstnerdata og en brugergrænseflade (UI) til at fremvise med disse data.
 
-### API Routes og Funktioner
+## API Routes og Funktioner
 
 ### Routes
 
