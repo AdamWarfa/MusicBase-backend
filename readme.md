@@ -33,10 +33,10 @@ Database-tabeller og struktur kan oprettes ved hjælp af migrations og seeder ef
 # Trin til opsætning
 
 - Klon dette repository:
-git clone https://github.com/din-bruger/projekt-x-backend.git
+git clone `https://github.com/din-bruger/projekt-x-backend.git`
 - Naviger til projektmappen:
 cd projekt-x-backend 
-- Installer afhængigheder: npm install 
+- Installer afhængigheder: `npm install `
 - Konfigurer miljøvariabler
 Opret en .env-fil i projektroden og konfigurer følgende miljøvariabler:
 MYSQL_HOST=musicbase.mysql.database.azure.com
@@ -44,13 +44,13 @@ MYSQL_DATABASE=musicbase_db
 MYSQL_USER=musicbase_admin
 MYSQL_PASSWORD=Kea12345
 MYSQL_CERT=true 
-- Start serveren: npm start
+- Start serveren: `npm start`
 
 ## Eksempelklient
 
 5. Åbn en webbrowser og besøg `https://musicbasebe.azurewebsites.net/` for at bruge applikationen.
 
-## Brug
+
 
 - Gennemse artister, albums og tracks.
 - Gennemse
