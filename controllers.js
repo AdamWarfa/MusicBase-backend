@@ -19,6 +19,7 @@ function getAllAlbums(req, res) {
   tracks.id AS trackId,
   tracks.trackName AS trackName
   FROM albums 
+  ORDER BY albumTitle;
 JOIN album_tracks 
 ON albums.id = album_tracks.albumId
 JOIN tracks 
