@@ -18,12 +18,12 @@ function getAllAlbums(req, res) {
   SELECT albums.*,
   tracks.id AS trackId,
   tracks.trackName AS trackName
-  FROM albums 
-  ORDER BY albumTitle;
+  FROM albums  
 JOIN album_tracks 
 ON albums.id = album_tracks.albumId
 JOIN tracks 
 ON album_tracks.trackId = tracks.id
+ORDER BY albumTitle;
   `;
   db.query(query, (error, results, fields) => {
     if (error) {
