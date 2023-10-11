@@ -184,7 +184,7 @@ async function postArtist(req, res) {
     if (error) {
       console.log(error);
     } else {
-      console.log("Artist added");
+      console.log(`Artist added as ${artistId}`);
       res.json(results);
     }
   });
@@ -204,7 +204,7 @@ async function postAlbum(req, res) {
     if (error) {
       console.log(error);
     } else {
-      console.log("Album added");
+      console.log(`Album added as ${albumId}`);
       res.json(results);
     }
   });
@@ -227,7 +227,7 @@ async function postTrack(req, res) {
     if (error) {
       console.log(error);
     } else {
-      console.log("Track added");
+      console.log(`Track added as ${trackId}`);
       res.json(results);
     }
   });
@@ -280,14 +280,32 @@ async function updateTrackById(req, res) {
 async function deleteArtistById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = /*SQL*/ `
+  const query1 = /*SQL*/ `
   DELETE FROM artist_tracks WHERE artistId = ?;
+  `;
+  const query2 = /*SQL*/ `
   DELETE FROM album_artists WHERE artistId = ?;
+  `;
+  const query3 = /*SQL*/ `
   DELETE FROM artists WHERE id = ?;
   `;
-  const values = [id, id, id];
+  const values = [id];
 
-  db.query(query, values, (error, results, fields) => {
+  db.query(query1, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Artist ${id} deleted from artist_tracks`);
+    }
+  });
+  db.query(query2, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Artist ${id} deleted from artist_albums`);
+    }
+  });
+  db.query(query3, values, (error, results, fields) => {
     if (error) {
       console.log(error);
     } else {
@@ -300,14 +318,32 @@ async function deleteArtistById(req, res) {
 async function deleteAlbumById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = /*SQL*/ `
+  const query1 = /*SQL*/ `
   DELETE FROM album_tracks WHERE albumId = ?;
+  `;
+  const query2 = /*SQL*/ `
   DELETE FROM album_artists WHERE albumId = ?;
+  `;
+  const query3 = /*SQL*/ `
   DELETE FROM albums WHERE id = ?;
   `;
   const values = [id, id, id];
 
-  db.query(query, values, (error, results, fields) => {
+  db.query(quer1, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Album  ${id} deleted from album_tracks`);
+    }
+  });
+  db.query(query2, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Album  ${id} deleted from album_artists`);
+    }
+  });
+  db.query(query3, values, (error, results, fields) => {
     if (error) {
       console.log(error);
     } else {
@@ -320,14 +356,32 @@ async function deleteAlbumById(req, res) {
 async function deleteTrackById(req, res) {
   console.log(req.params.id);
   const id = req.params.id;
-  const query = /*SQL*/ `
+  const query1 = /*SQL*/ `
   DELETE FROM album_tracks WHERE trackId = ?;
+  `;
+  const query2 = /*SQL*/ `
   DELETE FROM artist_tracks WHERE trackId = ?;
+  `;
+  const query3 = /*SQL*/ `
   DELETE FROM tracks WHERE id = ?;
   `;
-  const values = [id, id, id];
+  const values = [id];
 
-  db.query(query, values, (error, results, fields) => {
+  db.query(query1, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Track ${id} deleted from album_tracks`);
+    }
+  });
+  db.query(query2, values, (error, results, fields) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Track ${id} deleted from artist_tracks`);
+    }
+  });
+  db.query(query3, values, (error, results, fields) => {
     if (error) {
       console.log(error);
     } else {
